@@ -15,6 +15,13 @@ services:
     environment:
       env_file:
         .env
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uroot", "-p$ROOT_ACCESS_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 2m
+
 
   prod:
     image: tomcat:9.0-jdk11
