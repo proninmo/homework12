@@ -1,7 +1,12 @@
 version: '3.7'
 services:
   creating:
-#    environment:
+    environment:
+      - MYSQL_USER=user
+      - PORT=3306
+      - DBIP=192.168.88.33
+      - MYSQL_PASSWORD=User123qaz456wsx
+      - MYSQL_DATABASE=homework12
 #      env_file:
 #        .env
     build: src
@@ -12,7 +17,11 @@ services:
   
   db:
     image: mysql/mysql-server:latest
-#    environment:
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootMeg@Pa$$w0rd!
+      - MYSQL_DATABASE=homework12
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=User123qaz456wsx
 #      env_file:
 #        .env
 
