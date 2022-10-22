@@ -1,6 +1,7 @@
 FROM alpine:3.14
 RUN apk update && apk add maven git
 ENV CONF=App42PaaS-Java-MySQL-Sample/WebContent/Config.properties
+ARG MYSQL_USER MYSQL_DATABASE MYSQL_PASSWORD DBIP PORT
 WORKDIR /tmp
 RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git
 RUN echo "app42.paas.db.username = $MYSQL_USER\n" > ${CONF}
