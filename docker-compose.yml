@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  creating:
+    build: src
+    volumes:
+      - type: volume
+        source: share
+        target: /tmp/App42PaaS*/target
+  
+  prod:
+    build: prod
+    volumes:
+      - type: volume
+        source: share
+        target: /tmp
+
+volumes:
+  share:
