@@ -17,10 +17,10 @@ services:
   db:
     image: mysql/mysql-server:latest
     environment:
-      - MYSQL_USER=user
-      - MYSQL_DATABASE=homework12
-      - MYSQL_PASSWORD=User123qaz456wsx
-      - MYSQL_ROOT_PASSWORD=RootMeg@Pa$$w0rd!
+      MYSQL_DATABASE: 'homework12'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'User123qaz456wsx'
+      MYSQL_ROOT_PASSWORD: 'RootMeg@Pa$$w0rd!'
     ports:
       - "3306:33060"
 
