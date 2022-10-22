@@ -13,6 +13,8 @@ services:
     image: mysql/mysql-server:latest
     env_file:
       - conf.env
+    ports:
+      - "3306:33060"
 
   prod:
     image: tomcat:9.0-jdk11
