@@ -2,13 +2,7 @@ version: '3.7'
 services:
   creating:
     build:
-      context: ./src
-      args:        
-        MYSQL_USER: 'user'
-        MYSQL_DATABASE: 'homework12'
-        MYSQL_PASSWORD: 'User123qaz456wsx'
-        DBIP: 'db'
-        PORT: '3306'   
+      context: ./src     
     volumes:
       - type: volume
         source: share
