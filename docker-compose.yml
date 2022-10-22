@@ -8,14 +8,14 @@ services:
     volumes:
       - type: volume
         source: share
-        target: /tmp/App42PaaS*/target
+        target: /tmp/war
   
   prod:
-    build: prod
+    image: tomcat:9.0-jdk11
     volumes:
       - type: volume
         source: share
-        target: /tmp
+        target: /usr/local/tomcat/webapps
 
 volumes:
   share:
