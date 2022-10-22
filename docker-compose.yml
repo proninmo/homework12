@@ -11,7 +11,7 @@ services:
         target: /tmp/war
   
   db:
-    image: mysql
+    image: mysql/mysql-server:latest
     environment:
       env_file:
         .env
