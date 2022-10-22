@@ -1,8 +1,7 @@
 version: '3.7'
 services:
   creating:
-    build:
-      context: ./src     
+    build: src     
     volumes:
       - type: volume
         source: share
