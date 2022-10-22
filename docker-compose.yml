@@ -1,9 +1,8 @@
 version: '3.7'
 services:
   creating:
-    environment:
-      env_file:
-        conf.env
+    env_file:
+      - conf.env
     build: src
     volumes:
       - type: volume
@@ -12,9 +11,8 @@ services:
   
   db:
     image: mysql/mysql-server:latest
-    environment:
-      env_file:
-        conf.env
+    env_file:
+      - conf.env
 
   prod:
     image: tomcat:9.0-jdk11
