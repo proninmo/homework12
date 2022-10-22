@@ -1,6 +1,6 @@
 FROM alpine:3.14
 RUN apk update && apk add maven git
-ENV CONF=App42PaaS-Java-MySQL-Sample/Config.properties
+ENV CONF=WebContent/Config.properties
 ENV MYSQL_USER: 'user'
 ENV MYSQL_DATABASE: 'homework12'
 ENV MYSQL_PASSWORD: 'User123qaz456wsx'
@@ -8,6 +8,8 @@ ENV DBIP: 'db'
 ENV PORT: '3306' 
 WORKDIR /tmp
 RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git
+WORKDIR /tmp/App42PaaS-Java-MySQL-Sample
+RUN sed -i 's/ROOT/webapps\/ROOT/' src/com/shephertz/app42/paas/sample/util/Util.java
 RUN echo "app42.paas.db.username = $MYSQL_USER\n" > ${CONF}
 RUN echo "app42.paas.db.port = $PORT\n" >> ${CONF}
 RUN echo "app42.paas.db.password = $MYSQL_PASSWORD\n" >> ${CONF}
