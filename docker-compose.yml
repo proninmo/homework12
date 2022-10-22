@@ -14,7 +14,7 @@ services:
     environment:
       env_file:
         .env
-      build: db
+      image: mysql:latest
 
   prod:
     image: tomcat:9.0-jdk11
