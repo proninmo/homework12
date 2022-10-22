@@ -1,6 +1,6 @@
 FROM alpine:3.14
 RUN apk update && apk add maven git
-ENV CONF=App42PaaS-Java-MySQL-Sample/WebContent/Config.properties
+ENV CONF=App42PaaS-Java-MySQL-Sample/Config.properties
 ENV MYSQL_USER: 'user'
 ENV MYSQL_DATABASE: 'homework12'
 ENV MYSQL_PASSWORD: 'User123qaz456wsx'
