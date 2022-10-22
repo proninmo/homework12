@@ -1,4 +1,4 @@
-FROM maven:3.8-eclipse-temurin-11-alpine
+FROM maven:3-eclipse-temurin-11-alpine
 RUN apk update && apk add maven git
 WORKDIR /tmp
 RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample.git
