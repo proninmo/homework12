@@ -1,6 +1,9 @@
 version: '3.7'
 services:
   creating:
+    environment:
+      env_file:
+        .env
     build: src
     volumes:
       - type: volume
